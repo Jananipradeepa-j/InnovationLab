@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises,asnyc,await</title>
+</head>
+<body>
+    <script>
+        //PROMISES: a promise in javascript is an object that represents the eventual completion of an asynchronous operation and its resulting value. 
+        // 3 possible states:
+        // pending->initial state,operation not completed yet.
+        // fulfilled(resolved)->Operation completed successfully
+        // rejected->operation failed.
+
+        let TicketBooking=new Promise((resolve,reject)=>{
+            let booking=true;
+            if(booking)
+                resolve()
+            else
+                reject()
+        })
+        .then(success)
+        .catch(failure)
+        function success(){
+            console.log("your ticket is confirmed")
+        }
+        function failure(){
+            console.log("no seats available")
+        }
+
+        let tossCoin=new Promise((resolve,reject)=>{
+        let rand=Math.floor(Math.random()*2);
+        if(rand==0)
+            resolve()
+        else
+            reject()
+    })
+</script>
+
+</body>
+</html>
